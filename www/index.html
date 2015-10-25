@@ -14,7 +14,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -23,11 +23,29 @@
   </head>
   <body ng-app="starter" ng-controller="mainCTRL">
 
-   
+   <ion-header-bar class="bar-dark" > 
+   <h1 class="title">Map</h1> 
+ </ion-header-bar> 
+ <ion-content> 
+ 
+ 
+   <div id="map" data-tap-disabled="true"></div> 
+ </ion-content> 
+ <ion-footer-bar class="bar-dark"> 
+   <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a> 
+ </ion-footer-bar> 
+ <ion-header-bar class="bar-dark" ng-init="init()"> 
+     <h1 class="title">Map</h1> 
+ </ion-header-bar> 
+
+<!--
       <ion-header-bar class="bar-positive">
-        <h1 class="title">Find Your Horoscope!</h1>
-          
+        <h1 class="title">Google Maps API</h1>
       </ion-header-bar>
+      <ion-content ng-controller="MapController">
+    <div id="map" data-tap-disabled="true"></div>
+      </ion-content>
+
       <ion-content> <div class="displayHoroscope"><h4>Your Horoscope is: {{displayHoroscope}}</h4></div> </ion-content>
       <ion-content class="listPadding">
           
@@ -35,5 +53,6 @@
               <li> <div class="monthList" ng-repeat="month in months" ng-click="getHoroscope($index)">{{month}}</div></li>
             </ul> 
       </ion-content>
+-->
   </body>
 </html>
