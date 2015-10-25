@@ -3,27 +3,16 @@
        <button class="button ion-android-arrow-back" ui-sref="home">  Back</button>
        </div>
    <h1 class="title">To Do List</h1> 
-
+<div class="buttons">
+       <button class="button button-dark" ng-click="sendData()">Save</button>
+       </div>
  </ion-header-bar>
 
 <ion-content>
 <div class="chemList">
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-clipboard"></i>
-    Readings
-  </a>  
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-earth"></i>
-    OWL Homework
-  </a> 
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-erlenmeyer-flask"></i>
-    Pre-Lab Preparation
-  </a>
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-lightbulb"></i>
-    Question of the Week
-  </a>
-    
+    <ion-checkbox ng-model="isChecked3">Readings</ion-checkbox>
+    <ion-checkbox ng-model="isChecked4">OWL Homework</ion-checkbox>
+    <ion-checkbox ng-model="isChecked5">Pre-Lab Preparation</ion-checkbox>
+    <ion-checkbox ng-model="isChecked6">Question of the Week</ion-checkbox>
 </div>
 </ion-content>

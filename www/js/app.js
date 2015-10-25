@@ -30,9 +30,7 @@ angular.module('starter', ['ionic'])
   }, 100);
 })
 
-.controller('mainCTRL', ['$scope', function($scope, $location) {
-    $scope.classes = ["History", "Chemistry", "Calculus", "ECE"];
-}])
+
 .config(function($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.otherwise('/home');
@@ -48,18 +46,33 @@ angular.module('starter', ['ionic'])
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
             .state('hist', {
             url: '/hist',
-            templateUrl: 'views/hist.html'
+            templateUrl: 'views/hist.html',
+            controller: 'mainCTRL'
         })
             .state('chem', {
             url: '/chem',
-            templateUrl: 'views/chem.html'
+            templateUrl: 'views/chem.html',
+            controller: 'mainCTRL'
         })
             .state('math', {
             url: '/math',
-            templateUrl: 'views/math.html'
+            templateUrl: 'views/math.html',
+            controller: 'mainCTRL'
         })
             .state('ece', {
             url: '/ece',
-            templateUrl: 'views/ece.html'
+            templateUrl: 'views/ece.html',
+            controller: 'mainCTRL'
         })
-});
+})
+
+.controller('mainCTRL', ['$scope', function($scope, $location, $localStorage) {
+//    $scope.hist = {
+//        value1: false,
+//        value2: false
+//    };
+//    $scope.sendData = function(page) {
+//            $scope.saved = localStorage.setItem(page.value1, true);
+//        console.log($scope.saved);
+//    };
+}]);

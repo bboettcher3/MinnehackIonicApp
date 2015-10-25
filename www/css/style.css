@@ -10,12 +10,11 @@
 }
 .classItems {
     text-align: center;
+    font-size: 32px;
+    border: none;
 }
 
 a {
     color:black;
     text-decoration: none;
-}
-.title {
-    text-align: center;
 }
