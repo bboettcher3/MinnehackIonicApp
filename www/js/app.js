@@ -40,39 +40,56 @@ angular.module('starter', ['ionic'])
         // HOME STATES AND NESTED VIEWS ========================================
     .state('home', {
             url: '/home',
-            templateUrl: 'views/home.html'
+            templateUrl: 'views/home.html',
+            controller: 'mainCTRL'
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
             .state('hist', {
             url: '/hist',
             templateUrl: 'views/hist.html',
-            controller: 'mainCTRL'
+            controller: 'histCTRL'
         })
             .state('chem', {
             url: '/chem',
             templateUrl: 'views/chem.html',
-            controller: 'mainCTRL'
+            controller: 'chemCTRL'
         })
             .state('math', {
             url: '/math',
             templateUrl: 'views/math.html',
-            controller: 'mainCTRL'
+            controller: 'mathCTRL'
         })
             .state('ece', {
             url: '/ece',
             templateUrl: 'views/ece.html',
-            controller: 'mainCTRL'
+            controller: 'eceCTRL'
         })
 })
 
-.controller('mainCTRL', ['$scope', function($scope, $location, $localStorage) {
-//    $scope.hist = {
-//        value1: false,
-//        value2: false
-//    };
-//    $scope.sendData = function(page) {
-//            $scope.saved = localStorage.setItem(page.value1, true);
-//        console.log($scope.saved);
-//    };
+.factory('myFactory', function($rootScope) {
+    $rootScope.data = {}; 
+    $rootScope.data.hist = [false, false];
+    $rootScope.data.chem = [false, false, false, false, false]; 
+    $rootScope.data.math = [false, false];
+    $rootScope.data.ece = [false, false];
+    console.log ("Data initialized");
+    return {};
+})
+
+.controller('eceCTRL', ['$scope', 'myFactory', function($scope) {
+    
+}])
+.controller('mathCTRL', ['$scope', 'myFactory', function($scope) {
+    
+}])
+.controller('chemCTRL', ['$scope', 'myFactory', function($scope) {
+    
+}])
+.controller('histCTRL', ['$scope', 'myFactory', function($scope) {
+    
+}])
+    
+.controller('mainCTRL', ['$scope', 'myFactory', function($scope, $rootScope) {
+    
 }]);

@@ -3,16 +3,14 @@
        <button class="button ion-android-arrow-back" ui-sref="home">  Back</button>
        </div>
    <h1 class="title">To Do List</h1> 
-<div class="buttons">
-       <button class="button button-dark" ng-click="sendData()">Save</button>
-       </div>
  </ion-header-bar>
 
 <ion-content>
 <div class="chemList">
-    <ion-checkbox ng-model="isChecked3">Readings</ion-checkbox>
-    <ion-checkbox ng-model="isChecked4">OWL Homework</ion-checkbox>
-    <ion-checkbox ng-model="isChecked5">Pre-Lab Preparation</ion-checkbox>
-    <ion-checkbox ng-model="isChecked6">Question of the Week</ion-checkbox>
+    <ion-checkbox ng-model="data.chem[0]">Readings</ion-checkbox>
+    <ion-checkbox ng-model="data.chem[1]">OWL Homework</ion-checkbox>
+    <ion-checkbox ng-model="data.chem[2]">Pre-Lab Preparation</ion-checkbox>
+    <ion-checkbox ng-model="data.chem[3]">Question of the Week</ion-checkbox>
+    <ion-checkbox ng-model="data.chem[4]">Pre-Discussion</ion-checkbox>
 </div>
 </ion-content>
